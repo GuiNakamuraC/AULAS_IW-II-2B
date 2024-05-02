@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Validation</title>
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/additional-methods.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/localization/messages_pt_BR.js"
+    ></script>
+
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Validation with JQuery</h1>
+      <form name="formCadastro" id="formCadastro" method="post">
+        <div class="row">
+          <label>Nome</label>
+          <input type="text" name="nome" id="nome" class="form-control" />
+        </div>
+        <div class="row">
+          <label>CPF</label>
+          <input type="text" name="cpf" id="cpf" class="form-control" placeholder="xxx.xxx.xxx-xx" />
+      </div>      
+        <div class="row">
+          <label>E-mail</label>
+          <input type="email" name="email" id="email" class="form-control" />
+        </div>
+        <div class="row">
+          <label>Telefone</label>
+          <input
+            type="text"
+            name="telefone"
+            id="telefone"
+            class="form-control"
+            placeholder="(xx) xxxxx-xxxx"
+          />
+          <span id="erro-telefone"></span>
+        </div>
+        <div class="row">
+          <label>Estado</label>
+          <select
+            name="UF_do_estado"
+            id="UF_do_estado"
+            onchange="mudou_a_UF(this)"
+            class="form-control"
+          >
+            <option value="">----</option>
+            <option value="RO">Rondônia</option>
+            <option value="AC">Acre</option>
+            <option value="AM">Amazonas</option>
+            <option value="RR">Roraima</option>
+            <option value="PA">Pará</option>
+            <option value="AP">Amapá</option>
+            <option value="TO">Tocantins</option>
+            <option value="MA">Maranhão</option>
+            <option value="PI">Piauí</option>
+            <option value="CE">Ceará</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="PB">Paraíba</option>
+            <option value="PE">Pernambuco</option>
+            <option value="AL">Alagoas</option>
+            <option value="SE">Sergipe</option>
+            <option value="BA">Bahia</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+            <option value="PR">Paraná</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="GO">Goiás</option>
+            <option value="DF">Distrito Federal</option>
+          </select>
+        </div>
+        <div class="row">
+          <label>Cidade</label>
+          <select name="cidade" id="cidade" class="form-control"></select>
+        </div>
+        <div class="row">
+          <label>Idade</label>
+          <input type="number" name="idade" id="idade" class="form-control" />
+        </div>
+        <div class="row">
+          <label>Instagram</label>
+          <input
+            type="text"
+            name="instagram"
+            id="instagram"
+            class="form-control"
+          />
+        </div>
+        <div class="row">
+          <button
+            type="submit"
+            id="enviar"
+            name="enviar"
+            class="glow-on-hover"
+            style="color: #333; margin-bottom: 2rem"
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+  <script src="js/mudou_a_UF.js"></script>
+</html>
